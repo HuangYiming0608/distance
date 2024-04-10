@@ -16,6 +16,6 @@ basic.forever(function () {
             # # # # #
             # # # # #
             `)
-        music.play(music.tonePlayable(131, music.beat(BeatFraction.Sixteenth)), music.PlaybackMode.UntilDone)
+        music.play(music.tonePlayable(131, music.beat(BeatFraction.Breve)), music.PlaybackMode.UntilDone)
     }
 })
