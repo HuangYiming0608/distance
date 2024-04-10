@@ -7,7 +7,6 @@ basic.forever(function () {
             # . . . #
             # # # # #
             `)
-        music.play(music.tonePlayable(131, music.beat(BeatFraction.Eighth)), music.PlaybackMode.InBackground)
     }
     if (CrocoKit_Sensor.Ultrasonic(DigitalPin.P1, DigitalPin.P0) < 10) {
         basic.showLeds(`
@@ -17,6 +16,6 @@ basic.forever(function () {
             # # # # #
             # # # # #
             `)
-        music.play(music.tonePlayable(131, music.beat(BeatFraction.Breve)), music.PlaybackMode.InBackground)
+        music.play(music.tonePlayable(131, music.beat(BeatFraction.Sixteenth)), music.PlaybackMode.UntilDone)
     }
 })
