@@ -1,14 +1,5 @@
 basic.forever(function () {
-    if (CrocoKit_Sensor.Ultrasonic(DigitalPin.P1, DigitalPin.P0) < 50) {
-        basic.showLeds(`
-            # # # # #
-            # . . . #
-            # . . . #
-            # . . . #
-            # # # # #
-            `)
-    }
-    if (CrocoKit_Sensor.Ultrasonic(DigitalPin.P1, DigitalPin.P0) < 10) {
+    if (CrocoKit_Sensor.Ultrasonic(DigitalPin.P1, DigitalPin.P0) < 5) {
         basic.showLeds(`
             # # # # #
             # # # # #
@@ -17,5 +8,15 @@ basic.forever(function () {
             # # # # #
             `)
         music.play(music.tonePlayable(131, music.beat(BeatFraction.Breve)), music.PlaybackMode.UntilDone)
+    } else if (CrocoKit_Sensor.Ultrasonic(DigitalPin.P1, DigitalPin.P0) < 50) {
+        if (true) {
+            basic.showLeds(`
+                # # # # #
+                # . . . #
+                # . . . #
+                # . . . #
+                # # # # #
+                `)
+        }
     }
 })
